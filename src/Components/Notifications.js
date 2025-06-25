@@ -43,8 +43,9 @@ const Notifications = () => {
 
     return (
         <div className="p-6 w-96">
-                <h2 className="text-lg font-bold mb-4 text-center">Notifications</h2>
-                {error && <p className="text-red-600 mb-4 text-center">{error}</p>}
+            <h2 className="text-lg font-bold mb-4 text-center">Notifications</h2>
+            {error && <p className="text-red-600 mb-4 text-center">{error}</p>}
+            <div className="h-96 overflow-y-auto">
                 {notifications.length > 0 ? (
                     notifications.map((notification) => (
                         <div key={notification.notificationID} className="bg-blue-100 p-4 rounded-md mb-4 shadow-md">
@@ -57,6 +58,7 @@ const Notifications = () => {
                     <p className="text-gray-600 text-center">No notifications available</p>
                 )}
             </div>
+        </div>
     );
 };
 

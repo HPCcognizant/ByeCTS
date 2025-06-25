@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom'; // Importing useNavigate for navigation
-import PolicyCard from './Policy'; // Importing PolicyCard component
-import { FaSearch, FaTimes } from 'react-icons/fa'; // Importing icons
-
+import { useNavigate } from 'react-router-dom'; 
+import PolicyCard from './Policy'; 
+import { FaSearch, FaTimes } from 'react-icons/fa'; 
 const Search = () => {
     const [searchTerm, setSearchTerm] = useState('');
-    const navigate = useNavigate(); // Initialize useNavigate for navigation
+    const navigate = useNavigate(); 
     const [policies, setPolicies] = useState([]);
     const [filteredPolicies, setFilteredPolicies] = useState([]);
     const [showPopup, setShowPopup] = useState(false);
@@ -75,8 +74,8 @@ const Search = () => {
                                     policyName={policy.policy_Name}
                                     policyPremium={policy.premiumAmount}
                                     policyId={policy.policyID}
-                                    imageUrl={`/img/${policy.policyName}.png`} // Assuming images named by policyName
-                                    onViewDetails={handleViewDetails} // 🔥 Pass navigation function
+                                    imageUrl={`/img/${policy.policyName}.png`} 
+                                    onViewDetails={handleViewDetails} 
                                 />
                             ))
                         ) : (

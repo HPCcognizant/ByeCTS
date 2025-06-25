@@ -142,7 +142,7 @@ const RegistrationForm = () => {
               <p style={{ color: passwordValidation.length ? "green" : "red" }}>At least 6 characters</p>
               <p style={{ color: passwordValidation.alphabet ? "green" : "red" }}>At least one letter</p>
               <p style={{ color: passwordValidation.number ? "green" : "red" }}>At least one number</p>
-              <p style={{ color: passwordValidation.specialChar ? "green" : "red" }}>At least one special character</p>
+              <p style={{ color: passwordValidation.specialChar ? "green" : "red" }}>At least one special character (@,#,$)</p>
             </div>
           )}
  

@@ -21,7 +21,7 @@ const AddCustomer = () => {
         // Customer Name validation
         if (!formData.customer_Name.trim()) {
             tempErrors.customer_Name = "Customer Name is required!";
-        } else if (!/^[A-Za-z]+$/.test(formData.customer_Name)) {
+        } else if (!/^[A-Za-z ]+$/.test(formData.customer_Name)) {
             tempErrors.customer_Name = "Customer Name can only contain alphabets!";
         }
  
